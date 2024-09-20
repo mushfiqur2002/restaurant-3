@@ -221,10 +221,13 @@ nav .container .buttons .contactBtn .btn p{
         height: 100%;
     }
 }
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 500px){
     nav .container .links{
         width: 100%;
     }
+}
+@media only screen and (max-width: 400px){
+    
     nav .container .buttons{
         gap: .5rem;
     }
