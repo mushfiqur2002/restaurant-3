@@ -187,7 +187,7 @@ nav .container .buttons .contactBtn .btn p{
         right: 0;
         top: 0;
         padding: 1rem 0rem 0rem 5rem;
-        background: rebeccapurple;
+        background: rgba(102, 51, 153, 0.953);
         gap: 3rem;
         right: -100%;
         transition: all 1s ease-in-out;
@@ -207,6 +207,9 @@ nav .container .buttons .contactBtn .btn p{
     }
 }
 @media only screen and (max-width: 600px){
+    nav .container .links{
+        width: 65%;
+    }
     #banner .container{
         height: 100%;
         grid-template-columns: 1fr;
