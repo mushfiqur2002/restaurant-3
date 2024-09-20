@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg-color : #FFFFEC;
+
+    --primary-color : #FFC32A;
+
+    --text-color : #3D3B40;
+}
+body{
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+    flex-direction: column;
+    background: var(--bg-color);
+    font-family: sans-serif;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 95%;
+    height: 100%;
+}
+.menuButton,.closeButton{
+    display: none;
+}
+.btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    padding: .8rem 1.5rem;
+    background: var(--primary-color);
+    border-radius: 5rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: bold;
+    gap: 1.5rem;
+}
+a{
+    text-decoration: none;
+}
+/* nav */
+nav{
+    width: 100%;
+    height: 5rem;
+}
+nav .container{
+    justify-content: space-between;
+}
+nav .container .logo h1{
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+nav .container .logo h1 span{
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+nav .container .links ul{
+    text-transform: capitalize;
+    list-style: none;
+    gap: 1.5rem;
+}
+nav .container .links ul li a{
+    font-size: 1rem;
+}
+nav .container .buttons{
+    gap: 1rem;
+}
+nav .container .buttons .profileImage{
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+nav .container .buttons .profileImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+nav .container .buttons .btn i{
+    font-size: 1.2rem;
+}
+nav .container .buttons .addCartButton{
+    position: relative;
+}
+nav .container .buttons .addCartButton .notification{
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    width: 1.3rem;
+    height: 1.3rem;
+    font-size: .8rem;
+    background: black;
+    border-radius: 50%;
+    color: var(--primary-color);
+}
+nav .container .buttons .addCartButton .btn{
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    padding: 0;
+}
+nav .container .buttons .contactBtn .btn{
+    gap: .5rem;
+}
+nav .container .buttons .btn i{
+    font-size: 1rem;
+}
+nav .container .buttons .contactBtn .btn p{
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+/* banner */
+#banner{
+    width: 100%;
+    height: 100%;
+}
+#banner .container{
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    
+}
+#banner .container .imageContainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    align-items: flex-end;
+}
+#banner .container .imageContainer .backBall{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background:var(--primary-color);
+    position: absolute;
+    z-index: -1;
+    bottom: -70px;
+}
+#banner .container .imageContainer img{
+    width: 470px;
+    height: 470px;
+}
+#banner .container .textContainer{
+    width: 95%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+#banner .container .textContainer h1{
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+#banner .container .textContainer p{
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+/* media */
+@media only screen and (max-width: 900px){
+    .btn{
+        padding: .8rem 1rem;
+    }
+    .menuButton,.closeButton{
+        display: inline;
+    }
+    nav .container .links{
+        width: 50%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: fixed;
+        z-index: 111;
+        right: 0;
+        top: 0;
+        padding: 1rem 0rem 0rem 5rem;
+        background: rebeccapurple;
+        gap: 3rem;
+        right: -100%;
+        transition: all 1s ease-in-out;
+    }
+    nav .container .links ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    nav .container .links ul li a{
+        font-size: 2rem;
+    }
+
+    nav .container .links.active{
+        display: flex;
+        right: 0;
+    }
+}
+@media only screen and (max-width: 600px){
+    #banner .container{
+        height: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem 0;
+        gap: 2.5rem;
+    }
+    #banner .container .imageContainer img{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media only screen and (max-width: 400px){
+    nav .container .links{
+        width: 100%;
+    }
+    nav .container .buttons{
+        gap: .5rem;
+    }
+    nav .container .buttons .contactBtn .btn i{
+        font-size: 1rem;
+    }
+
+    /* banner */
+    
+
+}
