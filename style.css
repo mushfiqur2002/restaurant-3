@@ -225,6 +225,14 @@ nav .container .buttons .contactBtn .btn p{
     nav .container .links{
         width: 100%;
     }
+    #banner .container .textContainer h1{
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+    #banner .container .textContainer p{
+        font-size: 1rem;
+        color: var(--text-color);
+    }
 }
 @media only screen and (max-width: 400px){
     
