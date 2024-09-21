@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Classic Breakfast",
+        "description": "A hearty breakfast platter with eggs, bacon, toast, and fresh fruit.",
+        "image": "https://example.com/images/classic-breakfast.jpg",
+        "price": 9.99,
+        "type": "Breakfast",
+        "star": 4.5
+    },
+    {
+        "id": 2,
+        "name": "Chicken Caesar Salad",
+        "description": "Grilled chicken served on a bed of fresh romaine lettuce with Caesar dressing.",
+        "image": "https://example.com/images/chicken-caesar-salad.jpg",
+        "price": 12.99,
+        "type": "Lunch",
+        "star": 4.7
+    },
+    {
+        "id": 3,
+        "name": "Juicy Mango Smoothie",
+        "description": "A refreshing mango smoothie made with fresh mangoes and a hint of lime.",
+        "image": "https://example.com/images/mango-smoothie.jpg",
+        "price": 5.99,
+        "type": "Juice",
+        "star": 4.8
+    },
+    {
+        "id": 4,
+        "name": "Grilled Salmon",
+        "description": "Perfectly grilled salmon fillet served with garlic mashed potatoes and steamed vegetables.",
+        "image": "https://example.com/images/grilled-salmon.jpg",
+        "price": 18.99,
+        "type": "Dinner",
+        "star": 4.6
+    },
+    {
+        "id": 5,
+        "name": "Chocolate Lava Cake",
+        "description": "A warm chocolate cake with a molten center, served with vanilla ice cream.",
+        "image": "https://example.com/images/lava-cake.jpg",
+        "price": 7.99,
+        "type": "Dessert",
+        "star": 4.9
+    }
+]
