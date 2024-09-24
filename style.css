@@ -239,8 +239,8 @@ nav .container .buttons .contactBtn .btn p {
 }
 
 #category .container .boxContainer .card {
-    width: 230px;
-    height: 260px;
+    width: 220px;
+    height: 240px;
     background: white;
     border-radius: 1.2rem;
     display: grid;
@@ -253,15 +253,15 @@ nav .container .buttons .contactBtn .btn p {
 }
 
 #category .container .boxContainer .card .image {
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     background: var(--primary-color);
     margin-top: 1.5rem;
 }
 #category .container .boxContainer .card .image svg{
-    width: 4rem;
-    height: 4rem;
+    width: 2.5rem;
+    height: 2.5rem;
     fill: black;
 }
 #category .container .boxContainer .card .info {
@@ -269,10 +269,12 @@ nav .container .buttons .contactBtn .btn p {
     justify-content: flex-start;
     text-transform: capitalize;
     padding-top: .5rem;
+    text-align: center;
+    gap: .5rem;
 }
 
 #category .container .boxContainer .card .info p:nth-child(1) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
