@@ -5,7 +5,7 @@ let arrData;
 async function fetchData() {
     try {
         const res = await fetch('data.json');
-        export const datas = await res.json();
+        const datas = await res.json();
         fliterCategory(datas)
 
     } catch (err) {
