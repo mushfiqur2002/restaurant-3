@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Classic Breakfast",
         "description": "A hearty breakfast platter with eggs, bacon, toast, and fresh fruit.",
-        "image": "https://example.com/images/classic-breakfast.jpg",
+        "image": "",
         "price": 9.99,
         "type": "Breakfast",
         "star": 4.5,

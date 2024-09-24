@@ -10,6 +10,7 @@
     --primary-color: #FFC32A;
 
     --text-color: #5B5656;
+    --red-color: #A02334;
 }
 
 body {
@@ -222,12 +223,14 @@ nav .container .buttons .contactBtn .btn p {
 }
 
 /* category */
-#category {
+#category,
+#cardSection {
     width: 100%;
     height: 100%;
 }
 
-#category .container {
+#category .container,
+#cardSection .container {
     flex-direction: column;
     padding: 3rem 0;
     gap: 3rem;
@@ -284,6 +287,123 @@ nav .container .buttons .contactBtn .btn p {
     color: var(--text-color);
 }
 
+/* cardSection */
+#cardSection .container .cardsContainer{
+    width: 100%;
+    flex-direction: column;
+    gap: 3rem;
+}
+#cardSection .container .cardsContainer .heading{
+    width: 100%;
+    justify-content: space-between;
+}
+#cardSection .container .cardsContainer .heading .pera p{
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    text-transform: capitalize;;
+    font-weight: bolder;
+}
+#cardSection .container .cardsContainer .cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#cardSection .container .cardsContainer .cards .card{
+    width: 280px;
+    height: 330px;
+    background: white;
+    display: grid;
+    grid-template-rows: 50% 1fr;
+    place-items: center;
+    border-radius: .5rem;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 24px -1px rgba(0, 0, 0,0.15);
+    -moz-box-shadow: 0px 0px 24px -1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 24px -1px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    position: relative;
+}
+#cardSection .container .cardsContainer .cards .card .addCart{
+    position: absolute;
+    z-index: 111;
+    top: 0;
+    right: 0;
+}
+#cardSection .container .cardsContainer .cards .card .addCart button{
+    border-radius: 0 0 0 .5rem;
+}
+#cardSection .container .cardsContainer .cards .card .addCart button i{
+    font-size: 1.5rem;
+}
+#cardSection .container .cardsContainer .cards .card .addCart button{
+    border-radius: 0 0 0 .5rem;
+}
+#cardSection .container .cardsContainer .cards .card .addCart{
+    position: absolute;
+    z-index: 111;
+    top: 0;
+    right: 0;
+}
+#cardSection .container .cardsContainer .cards .card .addCart{
+    position: absolute;
+    z-index: 111;
+    top: 0;
+    right: 0;
+}
+#cardSection .container .cardsContainer .cards .card .image{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#cardSection .container .cardsContainer .cards .card .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1;
+    transition: all .8s ease-in-out;
+}
+#cardSection .container .cardsContainer .cards .card .image img:hover{
+    scale: 1.2;
+}
+#cardSection .container .cardsContainer .cards .card .dtls{
+    width: 85%;
+    height: 80%;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+
+#cardSection .container .cardsContainer .cards .card .dtls .text p:nth-child(1){
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#cardSection .container .cardsContainer .cards .card .dtls .text p:nth-child(2){
+    font-size: .8rem;
+    padding-top: .2rem;
+    color: var(--text-color);
+}
+#cardSection .container .cardsContainer .cards .card .dtls .tagging{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+}
+#cardSection .container .cardsContainer .cards .card .dtls .tagging p:nth-child(1),
+#cardSection .container .cardsContainer .cards .card .dtls .tagging p:nth-child(2){
+    font-size: 1.1rem;
+    color: var(--red-color);
+    font-weight: bold;
+}
+#cardSection .container .cardsContainer .cards .card .dtls .tagging p:nth-child(2){
+    color: black;
+}
+#cardSection .container .cardsContainer .cards .card .dtls .tagging p:nth-child(2) i{
+    color: var(--primary-color);
+    padding-right: .3rem;
+}
 /* media */
 @media only screen and (max-width: 900px) {
     .btn {
