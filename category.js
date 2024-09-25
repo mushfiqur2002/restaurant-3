@@ -2,11 +2,12 @@ let categoryCon = document.querySelector('.boxContainer');
 let currentPage = window.location.pathname.split("/").pop();
 let arrData;
 
-async function fetchData() {
+export async function fetchData() {
     try {
         const res = await fetch('data.json');
         const datas = await res.json();
-        fliterCategory(datas)
+        fliterCategory(datas);
+        return datas;
 
     } catch (err) {
         console.log(err);
@@ -46,5 +47,7 @@ function displayCategory(items) {
     categoryCon.innerHTML = element;
 }
 
-// Fetch data and populate categoryArr
+// module.exports = fetchData;
 fetchData();
+
+
