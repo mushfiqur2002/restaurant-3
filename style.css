@@ -328,6 +328,11 @@ nav .container .buttons .contactBtn .btn p {
     top: 0;
     right: 0;
 }
+#cardSection .container .cardsContainer .cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
 #cardSection .container .cardsContainer .cards .card .addCart button{
     border-radius: 0 0 0 .5rem;
 }

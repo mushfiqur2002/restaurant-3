@@ -1,5 +1,5 @@
 let categoryCon = document.querySelector('.boxContainer');
-let currentPage = window.location.pathname.split("/").pop();
+export let currentPage = window.location.pathname.split("/").pop();
 let arrData;
 
 export async function fetchData() {
