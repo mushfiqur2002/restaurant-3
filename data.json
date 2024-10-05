@@ -11,6 +11,16 @@
     },
     {
         "id": 2,
+        "name": "Classic Breakfast",
+        "description": "A hearty breakfast platter with eggs, bacon, toast, and fresh fruit.",
+        "image": "image/food/bbq_ribs.png",
+        "price": 9.99,
+        "type": "Breakfast",
+        "star": 4.1,
+        "svgIcon":"<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\" width=\"24px\"><path d=\"M240-120q-33 0-56.5-23.5T160-200v-342q-37-22-58.5-58.5T80-680q0-66 47-113t113-47h480q66 0 113 47t47 113q0 43-21.5 79.5T800-542v342q0 33-23.5 56.5T720-120H240Zm0-80h480v-388l40-24q18-11 29-29t11-39q0-33-23.5-56.5T720-760H240q-33 0-56.5 23.5T160-680q0 22 10.5 40.5T200-610l40 22v388Zm212-92q12 11 28.5 11t27.5-11l120-120q12-12 12-28.5T628-468L508-588q-11-12-27.5-12T452-588L332-468q-11 11-11 27.5t11 28.5l120 120Zm28-84-64-64 64-64 64 64-64 64Zm0-104Z\"/></svg>"
+    },
+    {
+        "id": 3,
         "name": "Chicken Caesar Salad",
         "description": "Grilled chicken served on a bed of fresh romaine lettuce with Caesar dressing.",
         "image": "image/food/caesar_salad.png",
@@ -20,7 +30,7 @@
         "svgIcon":"<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\" width=\"24px\"><path d=\"M320-80v-70q-105-42-172.5-130T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 112-67.5 200T640-150v70H320Zm80-400h160v-310q-20-5-40-7.5t-40-2.5q-20 0-40 2.5t-40 7.5v310Zm-240 0h160v-277q-75 43-117.5 117T160-480Zm480 0h160q0-86-42.5-160T640-757v277ZM400-160h160v-44q72-29 133-76.5T784-400H176q30 72 91 119.5T400-204v44Zm0 0h160-160Z\"/></svg>"
     },
     {
-        "id": 3,
+        "id": 4,
         "name": "Juicy Mango Smoothie",
         "description": "A refreshing mango smoothie made with fresh mangoes and a hint of lime.",
         "image": "image/food/bbq_ribs.png",
@@ -30,7 +40,7 @@
         "svgIcon":"<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\" width=\"24px\"><path d=\"M320-120v-80h120v-164q-86-14-143-80t-57-156v-240h480v240q0 90-57 156t-143 80v164h120v80H320Zm160-320q56 0 98-34t56-86H326q14 52 56 86t98 34ZM320-640h320v-120H320v120Zm160 200Z\"/></svg>"
     },
     {
-        "id": 4,
+        "id": 5,
         "name": "Grilled Salmon",
         "description": "Perfectly grilled salmon fillet served with garlic mashed potatoes and steamed vegetables.",
         "image": "image/food/grilled_salmon.png",
@@ -40,7 +50,7 @@
         "svgIcon":"<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\" width=\"24px\"><path d=\"m160-120-80-80h800l-80 80H160Zm-40-120q6-18 16-34t24-30v-296h-40v-60h40v-30h-40v-60h40v-30h-40v-60h280q33 0 56.5 23.5T480-760v10h360v60H480v10q0 33-23.5 56.5T400-600h-80v244q14 2 28 6t26 12q26-65 83-103.5T583-480q90 0 153.5 61.5T800-268v28H120Zm334-80h252q-17-36-50-58t-73-22q-42 0-77 21t-52 59ZM320-750h80v-30h-80v30Zm0 90h80v-30h-80v30Zm-100-90h40v-30h-40v30Zm0 90h40v-30h-40v30Zm0 314q10-5 19.5-7.5T260-358v-242h-40v254Zm360 26Z\"/></svg>"
     },
     {
-        "id": 5,
+        "id": 6,
         "name": "Chocolate Lava Cake",
         "description": "A warm chocolate cake with a molten center, served with vanilla ice cream.",
         "image": "image/food/chocolate_cake.png",
@@ -50,7 +60,7 @@
         "svgIcon":"<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\" width=\"24px\" ><path d=\"M160-80q-17 0-28.5-11.5T120-120v-200q0-33 23.5-56.5T200-400v-160q0-33 23.5-56.5T280-640h160v-58q-18-12-29-29t-11-41q0-15 6-29.5t18-26.5l56-56 56 56q12 12 18 26.5t6 29.5q0 24-11 41t-29 29v58h160q33 0 56.5 23.5T760-560v160q33 0 56.5 23.5T840-320v200q0 17-11.5 28.5T800-80H160Zm120-320h400v-160H280v160Zm-80 240h560v-160H200v160Zm80-240h400-400Zm-80 240h560-560Zm560-240H200h560Z\"/></svg>"
     },
     {
-        "id": 5,
+        "id": 7,
         "name": "Chocolate Lava Cake",
         "description": "A warm chocolate cake with a molten center, served with vanilla ice cream.",
         "image": "image/food/bbq_ribs.png",
@@ -60,7 +70,7 @@
         "svgIcon":"<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\" width=\"24px\" ><path d=\"M160-80q-17 0-28.5-11.5T120-120v-200q0-33 23.5-56.5T200-400v-160q0-33 23.5-56.5T280-640h160v-58q-18-12-29-29t-11-41q0-15 6-29.5t18-26.5l56-56 56 56q12 12 18 26.5t6 29.5q0 24-11 41t-29 29v58h160q33 0 56.5 23.5T760-560v160q33 0 56.5 23.5T840-320v200q0 17-11.5 28.5T800-80H160Zm120-320h400v-160H280v160Zm-80 240h560v-160H200v160Zm80-240h400-400Zm-80 240h560-560Zm560-240H200h560Z\"/></svg>"
     },
     {
-        "id": 6,
+        "id": 8,
         "name": "Chocolate Lava Cake",
         "description": "A warm chocolate cake with a molten center, served with vanilla ice cream.",
         "image": "image/food/bbq_ribs.png",

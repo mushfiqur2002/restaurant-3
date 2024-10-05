@@ -306,6 +306,9 @@ nav .container .buttons .contactBtn .btn p {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
 }
 #cardSection .container .cardsContainer .cards .card{
     width: 280px;
@@ -328,11 +331,7 @@ nav .container .buttons .contactBtn .btn p {
     top: 0;
     right: 0;
 }
-#cardSection .container .cardsContainer .cards{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
+
 #cardSection .container .cardsContainer .cards .card .addCart button{
     border-radius: 0 0 0 .5rem;
 }
@@ -468,6 +467,9 @@ nav .container .buttons .contactBtn .btn p {
     #banner .container .imageContainer img {
         width: 100%;
         height: 100%;
+    }
+    #cardSection .container .cardsContainer .cards{
+        justify-content: center;
     }
 }
 
