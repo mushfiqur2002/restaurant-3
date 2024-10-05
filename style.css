@@ -107,6 +107,11 @@ nav .container .links ul {
 
 nav .container .links ul li a {
     font-size: 1rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+nav .container .links ul li.active{
+    border-bottom: 5px solid var(--primary-color);
 }
 
 nav .container .buttons {
@@ -242,12 +247,12 @@ nav .container .buttons .contactBtn .btn p {
 }
 
 #category .container .boxContainer .card {
-    width: 220px;
-    height: 240px;
+    width: 200px;
+    height: 150px;
     background: white;
     border-radius: 1.2rem;
     display: grid;
-    grid-template-rows: 150px 1fr;
+    grid-template-rows: 60px 1fr;
     place-items: center;
     -webkit-box-shadow: 0px 0px 24px -1px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 0px 24px -1px rgba(0, 0, 0, 0.15);
@@ -256,8 +261,8 @@ nav .container .buttons .contactBtn .btn p {
 }
 
 #category .container .boxContainer .card .image {
-    width: 90px;
-    height: 90px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background: var(--primary-color);
     margin-top: 1.5rem;
@@ -408,6 +413,16 @@ nav .container .buttons .contactBtn .btn p {
     color: var(--primary-color);
     padding-right: .3rem;
 }
+#cardSection .container .pera{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#cardSection .container .pera p{
+    text-transform: capitalize;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
 /* media */
 @media only screen and (max-width: 900px) {
     .btn {
@@ -470,6 +485,9 @@ nav .container .buttons .contactBtn .btn p {
     }
     #cardSection .container .cardsContainer .cards{
         justify-content: center;
+    }
+    #category .container .boxContainer .card{
+        width: 150px;
     }
 }
 

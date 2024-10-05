@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" class="center">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Foodis</title>
+    <title>Foodis | Menu</title>
 </head>
-
 <body class="center">
     <nav class="center">
         <div class="container center">
@@ -23,10 +21,10 @@
                 <div class="menuButton center">
                     <button class="btn" id="openBtn"><i class="fa-solid fa-xmark"></i></button>
                 </div>
-                <ul class="center">
-                    <li class="active"><a href="index.html" aria-current="page">home</a></li>
+                <ul class="center" aria-current="">
+                    <li><a href="index.html">home</a></li>
                     <li><a>about</a></li>
-                    <li><a href="menu.html">menu</a></li>
+                    <li class="active"><a href="menu.html" aria-current="page">menu</a></li>
                     <li><a>service</a></li>
                     <li><a>reservation</a></li>
                 </ul>
@@ -51,72 +49,30 @@
         </div>
     </nav>
 
-    <section id="banner" class="center">
-        <div class="container">
-            <div class="imageContainer center">
-                <div class="backBall"></div>
-                <img src="image/banner01.png">
-            </div>
-            <div class="textContainer center">
-                <h1>We love food,<br> that's why we call it Foodis</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quidem expedita dolorum aperiam sunt
-                    cum officia, minus deserunt beatae accusamus consequatur sint, libero enim repellendus voluptate
-                    culpa eos amet facere!</p>
-                <div>
-                    <button class="btn"><i class="fa-solid fa-circle-plus"></i> order now</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="category" class="center">
         <div class="container center">
             <div class="titleContainer">
-                <h1 class="title">our categorys</h1>
+                <h1 class="title">our menu</h1>
             </div>
             <div class="boxContainer center">
                 <!-- adding by category js -->
-            </div>
-            <div>
-                <button class="btn" onclick=""><a href="menu.html">see more</a></button>
             </div>
         </div>
     </section>
 
     <section id="cardSection" class="center">
         <div class="container center">
-            <div class="titleContainer">
-                <h1 class="title">our special</h1>
-            </div>
             <div class="cardsContainer center">
-                <div class="heading center">
-                    <div class="pera">
-                        <p>most famous dishes<br>from our menu</p>
-                    </div>
-                    <div class="navigation center" style="gap:1rem">
-                        <button id="prevBtn" class="btn"><i class="fa-solid fa-caret-left"></i></button>
-                        <button id="nextBtn" class="btn"><i class="fa-solid fa-caret-right"></i></button>
-                    </div>
-                </div>
-                <div class="cards center">
-                    
-                </div>
-            </div>
-            <div class="pera">
-                <p>look for more food </p>
-                <div>
-                    <button class="btn" onclick=""><a href="menu.html">see more</a></button>
-                </div>
+                <div class="cards center">   </div>
             </div>
         </div>
     </section>
 
 
-
     <!-- script -->
-    <script type="module" src="script.js"></script>
-    <script type="module" src="category.js"></script>
-    <script type="module" src="foodCard.js"></script>
-</body>
+     <script src="script.js"></script>
+     <script src="category.js" type="module"></script>
+     <script src="foodCard.js" type="module"></script>
 
+</body>
 </html>
