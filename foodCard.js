@@ -73,7 +73,7 @@ function displayCard() {
                         </div>
                     </div>
                 </div>`;
-    }).join('') + Math.random();
+    }).join('');
 
     cardContainer.innerHTML = element;
 }
