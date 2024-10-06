@@ -1,9 +1,11 @@
-import { fetchData, currentPage } from './category.js';
+import { fetchData } from './category.js';
+import { currentPage } from './script.js';
 
 const cardContainer = document.querySelector(".cardsContainer .cards");
 const prevBtn = document.querySelector(".navigation #prevBtn");
 const nextBtn = document.querySelector(".navigation #nextBtn");
 let filterItems = [];
+let allData = [];  // Store all data
 let currentIndex = 0;
 let cardShow = 4;
 let screenSize = window.innerWidth;
@@ -16,31 +18,43 @@ if (screenSize < 900) {
 }
 
 async function loadData() {
-    const data = await fetchData(); // Await the fetchData call 
+    const data = await fetchData(); // Await the fetchData call
+    allData = data;  // Store the fetched data
 
-    console.log(data,currentPage)
     // Check if current page is 'index.html' or ""
     if (currentPage === 'index.html' || currentPage === "") {
         // Filter data to only those with a star rating above 4.5
-        filterItems = data.filter(item => item.star > 4.5);
-    }else if (currentPage === 'menu.html') {
-        filterItems = data; // Show all items in menu.html
+        filterItems = allData.filter(item => item.star > 4.5);
+    } else if (currentPage === 'menu.html') {
+        filterItems = allData; // Show all items in menu.html
     }
-    displayCard();
+    displayCard(); // Display the initial set of cards
+}
+
+// Filter and display items based on selected category
+export function filterAndDisplayItems(selectedCategory) {  // Export function
+    if (selectedCategory === 'all') {
+        filterItems = allData; // Show all items when 'all' is selected
+    } else {
+        filterItems = allData.filter(item => item.type === selectedCategory); // Filter by category
+    }
+    displayCard(); // Display the filtered cards
 }
 
 function displayCard() {
     let selectItem = [];
-    let star = currentIndex * cardShow;
-    let end = star + cardShow;
+    let start = currentIndex * cardShow;
+    let end = start + cardShow;
+
     if (currentPage === 'index.html' || currentPage === "") {
-        selectItem = filterItems.slice(star, end);
+        selectItem = filterItems.slice(start, end);
         prevBtn.disabled = currentIndex === 0;
-        nextBtn.disabled = end > filterItems.length;
-    }else if (currentPage === 'menu.html') {
-        selectItem = filterItems;
+        nextBtn.disabled = end >= filterItems.length;
+    } else if (currentPage === 'menu.html') {
+        selectItem = filterItems.sort(() => Math.random() - 0.5);  // Display all items in menu
     }
-    let element = selectItem.map(function (item) {
+
+    let element = selectItem.map(function(item) {
         return `<div class="card">
                     <div class="addCart">
                         <button class="btn"><i class="fa-solid fa-cart-plus"></i></button>
@@ -59,28 +73,25 @@ function displayCard() {
                         </div>
                     </div>
                 </div>`;
-    }).join('');
+    }).join('') + Math.random();
 
     cardContainer.innerHTML = element;
-
 }
 
+// Add event listeners for prev/next buttons if on index.html
 if (currentPage === 'index.html' || currentPage === "") {
-    prevBtn.addEventListener("click", function () {
+    prevBtn.addEventListener("click", function() {
         if (currentIndex > 0) {
             currentIndex--;
             displayCard();
         }
-    })
-    nextBtn.addEventListener("click", function () {
+    });
+    nextBtn.addEventListener("click", function() {
         if ((currentIndex + 1) * cardShow < filterItems.length) {
             currentIndex++;
             displayCard();
         }
-    })
+    });
 }
 
 loadData();
-
-
-

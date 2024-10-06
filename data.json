@@ -1,9 +1,9 @@
 [
     {
         "id": 1,
-        "name": "Classic Breakfast",
+        "name": "american Breakfast",
         "description": "A hearty breakfast platter with eggs, bacon, toast, and fresh fruit.",
-        "image": "image/food/bbq_ribs.png",
+        "image": "image/food/breakFast01.jpeg",
         "price": 9.99,
         "type": "Breakfast",
         "star": 4.5,
@@ -13,7 +13,7 @@
         "id": 2,
         "name": "Classic Breakfast",
         "description": "A hearty breakfast platter with eggs, bacon, toast, and fresh fruit.",
-        "image": "image/food/bbq_ribs.png",
+        "image": "image/food/breakFast.jpeg",
         "price": 9.99,
         "type": "Breakfast",
         "star": 4.1,
@@ -33,7 +33,7 @@
         "id": 4,
         "name": "Juicy Mango Smoothie",
         "description": "A refreshing mango smoothie made with fresh mangoes and a hint of lime.",
-        "image": "image/food/bbq_ribs.png",
+        "image": "image/food/juicy_mango_smoothie.jpeg",
         "price": 5.99,
         "type": "Juice",
         "star": 4.8,
@@ -61,9 +61,9 @@
     },
     {
         "id": 7,
-        "name": "Chocolate Lava Cake",
+        "name": "ice cream",
         "description": "A warm chocolate cake with a molten center, served with vanilla ice cream.",
-        "image": "image/food/bbq_ribs.png",
+        "image": "image/food/ice_cream.jpeg",
         "price": 7.99,
         "type": "Dessert",
         "star": 4.9,
@@ -71,12 +71,12 @@
     },
     {
         "id": 8,
-        "name": "Chocolate Lava Cake",
+        "name": "oreo Cake",
         "description": "A warm chocolate cake with a molten center, served with vanilla ice cream.",
-        "image": "image/food/bbq_ribs.png",
-        "price": 7.99,
+        "image": "image/food/oreo_cake.jpeg",
+        "price": 6.29,
         "type": "Dessert",
-        "star": 4.9,
+        "star": 4.1,
         "svgIcon":"<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\" width=\"24px\" ><path d=\"M160-80q-17 0-28.5-11.5T120-120v-200q0-33 23.5-56.5T200-400v-160q0-33 23.5-56.5T280-640h160v-58q-18-12-29-29t-11-41q0-15 6-29.5t18-26.5l56-56 56 56q12 12 18 26.5t6 29.5q0 24-11 41t-29 29v58h160q33 0 56.5 23.5T760-560v160q33 0 56.5 23.5T840-320v200q0 17-11.5 28.5T800-80H160Zm120-320h400v-160H280v160Zm-80 240h560v-160H200v160Zm80-240h400-400Zm-80 240h560-560Zm560-240H200h560Z\"/></svg>"
     }
 ]

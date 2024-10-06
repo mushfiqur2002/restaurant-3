@@ -1,3 +1,4 @@
+export let currentPage = window.location.pathname.split("/").pop();
 const menuBtn = document.querySelector("#openBtn");
 const closeBtn = document.querySelector("#closeBtn");
 const linksContainer = document.querySelector("#linksCon"); 
