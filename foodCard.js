@@ -55,9 +55,9 @@ function displayCard() {
     }
 
     let element = selectItem.map(function(item) {
-        return `<div class="card">
+        return `<div class="card" data-id="${item.id}">
                     <div class="addCart">
-                        <button class="btn"><i class="fa-solid fa-cart-plus"></i></button>
+                        <button class="btn addtocart">+</button>
                     </div>
                     <div class="image">
                         <img src="${item.image}">
@@ -76,6 +76,19 @@ function displayCard() {
     }).join('');
 
     cardContainer.innerHTML = element;
+
+    // add cart in cart section function 
+    cardContainer.addEventListener("click",function(event){
+        let clickCard = event.target;
+        console.log("click",clickCard);
+        if (clickCard.classList.contains('addtocart')) {
+            let itemCard = clickCard.closest('.card');
+            let itemId = itemCard.getAttribute('data-id');
+            console.log('This item added:', itemId);
+        }
+
+        
+    })
 }
 
 // Add event listeners for prev/next buttons if on index.html

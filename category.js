@@ -25,7 +25,6 @@ function filterCategory(data) {
         } else {
             acc.push({ type: item.type, count: 1, svg: item.svgIcon });
         }
-        console.log(acc);
         return acc;
     }, []);
 

@@ -11,6 +11,11 @@
 
     --text-color: #5B5656;
     --red-color: #A02334;
+
+    --black01:#222222;
+    --black02:#03001C;
+    --black03:#434242;
+    --black04:#7F8487;
 }
 
 body {
@@ -56,7 +61,9 @@ a {
     text-decoration: none;
     color: black;
 }
-
+h1{
+    text-transform: capitalize;
+}
 .title {
     text-transform: capitalize;
     font-size: 2rem;
@@ -171,6 +178,98 @@ nav .container .buttons .btn i {
 nav .container .buttons .contactBtn .btn p {
     font-size: 1rem;
     text-transform: capitalize;
+}
+
+/* cart */
+nav .cart{
+    width: 600px;
+    max-width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background: var(--black03);
+    color: white;
+    z-index: 1000;
+    transition: .7s all ease-in-out;
+    display: grid;
+    grid-template-rows: 4rem 1fr 4rem;
+    box-shadow: none;
+}
+nav .cart.active{
+    right: 0;
+    box-shadow: -10px 0px 10px 1280px rgba(0, 0, 0, 0.5);
+    
+}
+nav .cart .addCartCon{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+nav .cart .addCartCon .list{
+    width: 100%;
+    height: 7rem;
+    background: var(--black04);
+    display: grid;
+    grid-template-columns: 7rem 1fr 4.5rem;
+    place-items: center;
+    padding: 10px 15px;
+}
+nav .cart .addCartCon .list:nth-child(even){
+    background: var(--black03);
+}
+
+nav .cart .addCartCon .list .image{
+    width: 100%;
+    height: 85%;
+    padding: 0 5px;
+}
+nav .cart .addCartCon .list .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+nav .cart .addCartCon .list .info{
+    text-transform: capitalize;
+    gap: 0.5rem;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+nav .cart .addCartCon .list .info p:nth-child(1){
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--black02);
+}
+nav .cart .addCartCon .list .info p:nth-child(2){
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--black01);
+}
+nav .cart .addCartCon .list:nth-child(even) .info p{
+    color: var(--bg-color);
+}
+nav .cart .addCartCon .list .quantity{
+    width: 90%;
+    justify-content: space-between;
+    background: var(--primary-color);
+    color: var(--black01);
+}
+nav .cart .addCartCon .list .quantity button{
+    padding: 5px;
+    cursor: pointer;
+}
+nav .cart .cartBtnCon{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    bottom: 0;
+}
+nav .cart .cartBtnCon .btn{
+    border-radius: 0;
+}
+nav .cart .cartBtnCon .btn:nth-child(2){
+    background: var(--bg-color);
 }
 
 /* banner */
