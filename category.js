@@ -18,12 +18,14 @@ export async function fetchData() {
 // Filter category
 function filterCategory(data) {
     let types = data.reduce((acc, item) => {
+        
         let existingCategory = acc.find(category => category.type === item.type);
         if (existingCategory) {
             existingCategory.count += 1;  // Increment the count of items in that category
         } else {
             acc.push({ type: item.type, count: 1, svg: item.svgIcon });
         }
+        console.log(acc);
         return acc;
     }, []);
 
