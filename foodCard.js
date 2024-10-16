@@ -4,8 +4,10 @@ import { currentPage } from './script.js';
 const cardContainer = document.querySelector(".cardsContainer .cards");
 const prevBtn = document.querySelector(".navigation #prevBtn");
 const nextBtn = document.querySelector(".navigation #nextBtn");
+const notification = document.querySelector(".addCartButton .notification");
 let filterItems = [];
 let allData = [];  // Store all data
+let cartsArr = [1, 3, 5, 6];
 let currentIndex = 0;
 let cardShow = 4;
 let screenSize = window.innerWidth;
@@ -18,10 +20,9 @@ if (screenSize < 900) {
 }
 
 async function loadData() {
-    const data = await fetchData(); // Await the fetchData call
+    const data = await fetchData();
     allData = data;  // Store the fetched data
 
-    // Check if current page is 'index.html' or ""
     if (currentPage === 'index.html' || currentPage === "") {
         // Filter data to only those with a star rating above 4.5
         filterItems = allData.filter(item => item.star > 4.5);
@@ -54,7 +55,7 @@ function displayCard() {
         selectItem = filterItems.sort(() => Math.random() - 0.5);  // Display all items in menu
     }
 
-    let element = selectItem.map(function(item) {
+    let element = selectItem.map(function (item) {
         return `<div class="card" data-id="${item.id}">
                     <div class="addCart">
                         <button class="btn addtocart">+</button>
@@ -78,28 +79,31 @@ function displayCard() {
     cardContainer.innerHTML = element;
 
     // add cart in cart section function 
-    cardContainer.addEventListener("click",function(event){
+    cardContainer.addEventListener("click", function (event) {
         let clickCard = event.target;
-        console.log("click",clickCard);
+
         if (clickCard.classList.contains('addtocart')) {
             let itemCard = clickCard.closest('.card');
             let itemId = itemCard.getAttribute('data-id');
-            console.log('This item added:', itemId);
+            addToCartFun(itemId);
         }
-
-        
     })
+}
+
+function addToCartFun(id) {
+    
+    console.log(cartsArr);
 }
 
 // Add event listeners for prev/next buttons if on index.html
 if (currentPage === 'index.html' || currentPage === "") {
-    prevBtn.addEventListener("click", function() {
+    prevBtn.addEventListener("click", function () {
         if (currentIndex > 0) {
             currentIndex--;
             displayCard();
         }
     });
-    nextBtn.addEventListener("click", function() {
+    nextBtn.addEventListener("click", function () {
         if ((currentIndex + 1) * cardShow < filterItems.length) {
             currentIndex++;
             displayCard();

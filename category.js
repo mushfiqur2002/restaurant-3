@@ -2,7 +2,7 @@ import { filterAndDisplayItems } from './foodCard.js';  // Import filterAndDispl
 import { currentPage } from './script.js';  
 
 let categoryCon = document.querySelector('.boxContainer');
-let arrData;
+
 
 export async function fetchData() {
     try {
@@ -76,7 +76,7 @@ function addCategoryClickEvents() {
     categoryCards.forEach(card => {
         card.addEventListener('click', function() {
             const selectedCategory = card.getAttribute('data-type');
-            filterAndDisplayItems(selectedCategory); // Pass the selected category to filter function
+            filterAndDisplayItems(selectedCategory); // Pass the selected category to foodCard.js
         });
     });
 }

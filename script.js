@@ -5,7 +5,6 @@ const closeCartBtn = document.querySelector(".cartCloseBtn");
 const linksContainer = document.querySelector("#linksCon");
 const cartContainer = document.querySelector(".cart");
 const addCartBtn = document.querySelector(".addCartButton .btn"); 
-const notification = document.querySelector(".notification"); 
 
 menuBtn.addEventListener('click',function(){
     linksContainer.classList.toggle("active");
