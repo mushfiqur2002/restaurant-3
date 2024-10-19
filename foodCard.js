@@ -7,7 +7,7 @@ const nextBtn = document.querySelector(".navigation #nextBtn");
 const notification = document.querySelector(".addCartButton .notification");
 let filterItems = [];
 let allData = [];  // Store all data
-let cartsArr = [1, 3, 5, 6];
+let cartsArr = [];
 let currentIndex = 0;
 let cardShow = 4;
 let screenSize = window.innerWidth;
@@ -91,7 +91,21 @@ function displayCard() {
 }
 
 function addToCartFun(id) {
-    
+    let thisItemCart = cartsArr.findIndex((value)=> value.id == id);
+    console.log(thisItemCart)
+    if(cartsArr.length<=0){
+        cartsArr = [{
+            id: id,
+            quantity: 1
+        }]
+    }else if(thisItemCart<0){
+        cartsArr.push({
+            id: id,
+            quantity:1
+        })
+    }else{
+        cartsArr[thisItemCart].quantity = cartsArr[thisItemCart].quantity + 1;
+    }
     console.log(cartsArr);
 }
 
